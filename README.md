@@ -25,8 +25,11 @@ This is unacceptable.
 There is no official music tagger that totally cleans this information. So currently there
 are 3 ways to clean this mess:
 
-1. Transcode files to another music format or even to AAC/M4A. This is lossy and unacceptable.
-2. Use ```ffmpeg``` in ```copy``` mode to rewrite the files without transcoding (lossless), but loosing header info. You'll have to retag your files.
+1. Transcode files to another music format or even to AAC/M4A. This is lossy and
+unacceptable.
+2. Use [```ffmpeg``` in ```copy``` mode](#for-the-curious-the-ffmpeg-method-discouraged)
+to rewrite the files without transcoding (lossless), but loosing header info. You'll have
+to retag your files.
 3. Do the right thing and cirurgicaly delete only the offending bytes on the file's header
 
 The method implemented by this script is #3. Simply run the ```un-istore.sh``` script in
