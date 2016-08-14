@@ -70,3 +70,27 @@ The ```un-istore.sh``` shell script contains a powerful perl script that cirurgi
 changes only the 20 or 30 offending bytes on your files. No more, no less. [See for
 yourself the simplicity an powerfulness](https://github.com/avibrazil/un-istore/blob/master/un-istore.sh)
 of its regular expressions.
+
+## For the curious: The ```ffmpeg``` method (discouraged)
+
+The ```un-istore.sh``` script is faster and superior than the ```ffmpeg``` in ```copy```
+mode method documented in this section. But if you are just curious about it, here it is:
+
+```shell
+mkdir clean;
+
+ls *m4a | while read f; do
+	echo ffmpeg -i \"$f\" -acodec copy -vn \"clean/$f\";
+done > conv.sh;
+
+chmod a+x conv.sh;
+./conv.sh;
+```
+
+After running this, a cleaned up version of your files will be under ```clean``` folder.
+```ffmpeg``` will completely rewrite your files (forgetting obscure tags as the ones
+we want to delete) while ```-acodec copy``` guarantees a lossless "conversion" in the
+audio level. You will loose some of your tags and cover art too, though. So retag your new
+files after that.
+
+Use ```un-istore.sh``` for a faster and more precise fix.
