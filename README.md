@@ -89,8 +89,8 @@ chmod a+x conv.sh;
 
 After running this, a cleaned up version of your files will be under ```clean``` folder.
 ```ffmpeg``` will completely rewrite your files (forgetting obscure tags as the ones
-we want to delete) while ```-acodec copy``` guarantees a lossless "conversion" in the
-audio level. You will loose some of your tags and cover art too, though. So retag your new
-files after that.
+we want to delete) while ```-acodec copy``` guarantees a plain copy (and not transcoding) 
+in the audio level. You will loose some of your tags and cover art too, though. So retag
+your new files after that.
 
 Use ```un-istore.sh``` for a faster and more precise fix.
