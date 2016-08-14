@@ -50,7 +50,7 @@ find . -name "*m4a" | sort | while read f; do
 				# User ID
 				s/user.{4}(.{4})cert/user\xFF\xFF\xFF\xFF$1cert/s;
 		
-				# User Name
+				# User Name in 2 instances
 				s/name$SEEK_FOR_USERNAME/name$NEW_USERNAME/;
 				s/ownr(.{4})data(.{8})$SEEK_FOR_USERNAME/ownr$1data$2$NEW_USERNAME/s;
 		
