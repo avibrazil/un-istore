@@ -32,9 +32,10 @@ to rewrite the files without transcoding (lossless), but loosing header info. Yo
 to retag your files.
 3. Do the right thing and cirurgicaly delete only the offending bytes on the file's header
 
-The method implemented by the ```un-istore.sh``` script is #3. Simply run it in
-the root folder of you music. It will recursively seek for all offending M4A files and
-clean them up. Pass 2 parameters to the script:
+The method implemented by the ```un-istore.sh``` script is #3.
+
+Simply run it in the root folder of you music. It will recursively seek for all offending
+M4A files and clean them up. Pass 2 parameters to the script:
 
 1. Your user name as it appears in the music files. Something like "**Your Name**".
 2. Your Apple user ID, which is an e-mail address as "**something@email.com**".
