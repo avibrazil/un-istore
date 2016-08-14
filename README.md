@@ -47,6 +47,9 @@ $ cd MyMusic
 $ un-istore.sh "Avi Alkalay" "some@email.com" | tee -a /tmp/un-istore.log
 ```
 
+**Try it first on an external copy of your music files before using it directly on you
+beloved music collection.**
+
 The script works on Linux and might work on macOS too (use your Mac terminal to run it).
 
 ## The proof it worked
