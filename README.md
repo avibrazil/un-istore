@@ -33,8 +33,8 @@ The method implemented by this script is #3. Simply run the ```un-istore.sh``` s
 the root folder of you music. It will recursively seek for all offending M4A files and
 change them. Pass 2 parameters to the script:
 
-1. Your user name as it appears in the music files. Something like "Your Name".
-2. Your Apple user ID, which is an e-mail address as "something@email.com".
+1. Your user name as it appears in the music files. Something like "**Your Name**".
+2. Your Apple user ID, which is an e-mail address as "**something@email.com**".
 
 Like this:
 
