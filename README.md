@@ -22,7 +22,8 @@ This is unacceptable.
 
 ## How to remove this info ?
 
-There are 3 ways to clean this mess:
+There is no official music tagger that totally cleans this information. So currently there
+are 3 ways to clean this mess:
 
 1. Transcode files to another music format or even to AAC/M4A. This is lossy and unacceptable.
 2. Use ```ffmpeg``` in ```copy``` mode to rewrite the files without transcoding (lossless), but loosing header info. You'll have to retag your files.
@@ -30,7 +31,10 @@ There are 3 ways to clean this mess:
 
 The method implemented by this script is #3. Simply run the ```un-istore.sh``` script in
 the root folder of you music. It will recursively seek for all offending M4A files and
-change them. Optionally capture its output for your records.
+change them. Pass 2 parameters to the script:
+
+1. Your user name as it appears in the music files. Something like "Your Name".
+2. Your Apple user ID, which is an e-mail address as "something@email.com".
 
 Like this:
 
@@ -39,7 +43,7 @@ $ cd MyMusic
 $ un-istore.sh "Avi Alkalay" "some@email.com" | tee -a /tmp/un-istore.log
 ```
 
-The script works on Linux and might work on macOS too (use your Mac terminal).
+The script works on Linux and might work on macOS too (use your Mac terminal to run it).
 
 ## The proof it worked
 Use ```exiftool``` to inspect an M4A file:
@@ -53,9 +57,14 @@ Apple Store Account             : iTunes Store
 User Name                       : iTunes Store
 ```
 
+You can also use the ```check-istore.sh``` script recursively check all your files. It
+will point you the files that are still dirty. But there will be none. I wrote
+the ```check-istore.sh``` script while developing ```un-istore.sh``` to check its
+effectiveness, is unneeded anymore but I keep it here for the records.
+
 ## The magic
 
-The ```un-istore.sh``` shell script contains a powerful perl script that cirurgicaly
+The ```un-istore.sh``` shell script contains a powerful perl script that cirurgically
 changes only the 20 or 30 offending bytes on your files. No more, no less. [See for
 yourself the simplicity an powerfulness](https://github.com/avibrazil/un-istore/blob/master/un-istore.sh)
 of its regular expressions.
