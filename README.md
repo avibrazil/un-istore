@@ -35,7 +35,7 @@ to retag your files.
 The method implemented by the ```un-istore.sh``` script is #3.
 
 Simply run it in the root folder of you music. It will recursively seek for all offending
-M4A files and clean them up. Pass 2 parameters to the script:
+M4A files and clean them up. Provide 2 parameters to the script:
 
 1. Your user name as it appears in the music files. Something like "**Your Name**".
 2. Your Apple user ID, which is an e-mail address as "**something@email.com**".
