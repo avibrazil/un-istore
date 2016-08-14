@@ -32,7 +32,8 @@ echo "old: “$SEEK_FOR_USERNAME”   •   “$SEEK_FOR_USERID”
 new: “$NEW_USERNAME”   •   “$NEW_USERID”" >&2
 
 
-# Avoid Unicode interference and increase speed
+
+# Operate in binary mode so avoid Unicode interference, and increase speed
 export LC_COLLATE=C
 export LC_ALL=C
 export LANG=C
