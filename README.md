@@ -66,10 +66,10 @@ User Name                       : iTunes Store
 
 Compare it with the [dirty example above](#the-proof).
 
-You can also use the ```check-istore.sh``` script recursively check all your files. It
+You can also use the ```check-istore.sh``` script to recursively check all your files. It
 will point you the files that are still dirty. But there will be none. I wrote
 the ```check-istore.sh``` script while developing ```un-istore.sh``` to check its
-effectiveness, is unneeded anymore but I keep it here for the records.
+effectiveness. It is unneeded anymore but I keep it here for the records.
 
 ## The magic
 
@@ -100,4 +100,4 @@ we want to delete) while ```-acodec copy``` guarantees a plain copy (and not tra
 in the audio level. You will loose some of your tags and cover art too, though. So retag
 your new files after that.
 
-Use ```un-istore.sh``` for a faster and more precise fix.
+Use ```un-istore.sh``` provided in this repository for a faster and more precise fix.
