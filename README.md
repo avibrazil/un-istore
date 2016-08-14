@@ -39,6 +39,8 @@ $ cd MyMusic
 $ un-istore.sh "Avi Alkalay" "some@email.com" | tee -a /tmp/un-istore.log
 ```
 
+The script works on Linux and might work on macOS too (use your Mac terminal).
+
 ## The proof it worked
 Use ```exiftool``` to inspect an M4A file:
 
@@ -50,3 +52,10 @@ Item ID                         : 0xffffffff
 Apple Store Account             : iTunes Store
 User Name                       : iTunes Store
 ```
+
+## The magic
+
+The ```un-istore.sh``` shell script contains a powerful perl script that cirurgicaly
+changes only the 20 or 30 offending bytes on your files. No more, no less. [See for
+yourself the simplicity an powerfulness](https://github.com/avibrazil/un-istore/blob/master/un-istore.sh)
+of its regular expressions.
