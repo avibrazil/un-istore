@@ -57,6 +57,8 @@ Apple Store Account             : iTunes Store
 User Name                       : iTunes Store
 ```
 
+Compare it with the [dirty example above](#the-proof).
+
 You can also use the ```check-istore.sh``` script recursively check all your files. It
 will point you the files that are still dirty. But there will be none. I wrote
 the ```check-istore.sh``` script while developing ```un-istore.sh``` to check its
