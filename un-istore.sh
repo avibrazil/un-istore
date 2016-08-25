@@ -9,6 +9,11 @@
 #
 #    un-istore.sh "The User Name" "theuserid@email.com"
 #
+# Tested only on Linux, but might work wherever you have Bash, Perl and Perl-Env. To use
+# it on Fedora Linux, install Perl-Env first, like this:
+#
+#    dnf install perl-Env
+#
 # Avi Alkalay <avi at unix dot sh>
 # Brazil 2016-08-13
 # Licence: LGPL v3
