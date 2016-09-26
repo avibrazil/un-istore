@@ -88,7 +88,8 @@ mkdir clean;
 
 ls *m4a | while read f; do
 	ffmpeg -i "$f" -acodec copy -vn "clean/$f" < /dev/null;
-done```
+done
+```
 
 After running this, a cleaned up version of your files will be under ```clean``` folder.
 ```ffmpeg``` will completely rewrite your files (forgetting obscure tags as the ones
