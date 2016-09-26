@@ -87,12 +87,8 @@ mode method documented in this section. But if you are just curious about it, he
 mkdir clean;
 
 ls *m4a | while read f; do
-	echo ffmpeg -i \"$f\" -acodec copy -vn \"clean/$f\";
-done > conv.sh;
-
-chmod a+x conv.sh;
-./conv.sh;
-```
+	ffmpeg -i "$f" -acodec copy -vn "clean/$f" < /dev/null;
+done```
 
 After running this, a cleaned up version of your files will be under ```clean``` folder.
 ```ffmpeg``` will completely rewrite your files (forgetting obscure tags as the ones

@@ -66,9 +66,11 @@ find . -name "*m4a" | sort | while read f; do
 				s/tran.{4}(sing|song)/tran\xFF\xFF\xFF\xFF$1/s;
 		
 				# Item ID
+				# Not sure if this needs removal
 				s/song.{4}tool/song\xFF\xFF\xFF\xFFtool/s;
 		
 				# Apple Store Catalog ID
+				# Not sure if this needs removal
 				s/cnID(.{4})data(.{8}).{4}/cnID$1data$2\xFF\xFF\xFF\xFF/s;
 				
 				print;
