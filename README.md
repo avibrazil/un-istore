@@ -10,10 +10,11 @@ your M4A files contain personal information.
 Use ```exiftool``` to inspect an M4A file:
 
 ```console
-$ exiftool -UserID -TransactionID -ItemID -AppleStoreAccount -UserName some-itunes-acquired-music-file.m4a
+$ exiftool -UserID -TransactionID -ItemID -AppleStoreCatalogID -AppleStoreAccount -UserName some-itunes-acquired-music-file.m4a
 User ID                         : 0x12345678
 Transaction ID                  : 0xabcdef98
 Item ID                         : 0x34e6b89a
+Apple Store Catalog ID          : 9876543210
 Apple Store Account             : some@email.com
 User Name                       : Avi Alkalay
 ```
@@ -56,15 +57,16 @@ The script works on Linux and might work on macOS too (use your Mac terminal to 
 Use ```exiftool``` to inspect an M4A file:
 
 ```console
-$ exiftool -UserID -TransactionID -ItemID -AppleStoreAccount -UserName some-itunes-acquired-music-file.m4a
+$ exiftool -UserID -TransactionID -ItemID -AppleStoreAccount -AppleStoreCatalogID -UserName some-itunes-acquired-music-file.m4a
 User ID                         : 0xffffffff
 Transaction ID                  : 0xffffffff
-Item ID                         : 0xffffffff
+Item ID                         : 0x34e6b89a
+Apple Store Catalog ID          : 9876543210
 Apple Store Account             : iTunes Store
 User Name                       : iTunes Store
 ```
 
-Compare it with the [dirty example above](#the-proof).
+Compare it with the [dirty example above](#the-proof). Catalog ID and Item ID are kept because they are not private information and they help with metadata when sharing music through iMessage.
 
 You can also use the ```check-istore.sh``` script to recursively check all your files. It
 will point you the files that are still dirty. But there will be none. I wrote
