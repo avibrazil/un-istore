@@ -83,12 +83,12 @@ of its regular expressions.
 ## For the curious: The ```ffmpeg``` method (discouraged)
 
 The ```un-istore.sh``` script is faster and superior than the ```ffmpeg``` in ```copy```
-mode method documented in this section. But if you are just curious about it, here it is:
+mode method documented in this section. But if you are just curious about it, here it is. Use terminal or command line, change directory to the folder containing your iTunes files and paste this:
 
 ```shell
 mkdir clean;
 
-ls *m4a | while read f; do
+\ls *m4a | while read f; do
 	ffmpeg -i "$f" -acodec copy -vn "clean/$f" < /dev/null;
 done
 ```
