@@ -86,6 +86,7 @@ The ```un-istore.sh``` script is faster and superior than the ```ffmpeg``` in ``
 mode method documented in this section. But if you are just curious about it, here it is. Use terminal or command line, change directory to the folder containing your iTunes files and paste this:
 
 ```shell
+cd folder/with/M4A/files
 mkdir clean;
 
 \ls *m4a | while read f; do
