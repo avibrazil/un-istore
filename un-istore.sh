@@ -66,7 +66,7 @@ find . -name "*m4a" | sort | while read f; do
 				s/tran.{4}(sing|song)/tran\xFF\xFF\xFF\xFF$1/s;
 		
 				# Item ID
-				# This doesnt needs removal, its not personal info
+				# This doesnt need removal, its not personal info
 				# s/song.{4}tool/song\xFF\xFF\xFF\xFFtool/s;
 		
 				# Apple Store Catalog ID
