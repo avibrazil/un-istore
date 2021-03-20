@@ -19,6 +19,11 @@
 # Licence: LGPL v3
 #########################################################################################
 
+# Operate in binary mode so avoid Unicode interference, and increase speed
+export LC_COLLATE=C
+export LC_ALL=C
+export LANG=C
+
 
 # Get user name and ID from command line
 export SEEK_FOR_USERNAME=${1:-iTunes Store}
@@ -37,11 +42,6 @@ echo "old: “$SEEK_FOR_USERNAME”   •   “$SEEK_FOR_USERID”
 new: “$NEW_USERNAME”   •   “$NEW_USERID”" >&2
 
 
-
-# Operate in binary mode so avoid Unicode interference, and increase speed
-export LC_COLLATE=C
-export LC_ALL=C
-export LANG=C
 
 # Do it, recursively...
 find . -name "*m4a" | sort | while read f; do
